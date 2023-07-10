@@ -36,12 +36,6 @@ jobs:
     - name: Execute Gradle build
       run: ./gradlew build
 
-    - name: Load properties from gradle.properties
-      id: loadProperties
-      run: |
-        export MOD_VERSION=$(grep -oP 'mod_version=\K.*' gradle.properties)
-        mv build/libs/mindustry-com.hechu.jar build/libs/MCmindustry-$MOD_VERSION.jar
-
     - name: Upload JAR file
       uses: actions/upload-artifact@v2
       with:
