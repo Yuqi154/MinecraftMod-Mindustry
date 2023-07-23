@@ -1,0 +1,241 @@
+{
+  "mod_elements": [
+    {
+      "name": "DrillRightClick",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcmindustry/procedures/DrillRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DrillGenitem",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_genitem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcmindustry/procedures/DrillGenitemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DrillCopper",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_mechanical",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcmindustry/block/entity/DrillCopperBlockEntity.java",
+          "src/main/java/net/mcmindustry/block/DrillCopperBlock.java",
+          "src/main/resources/assets/mcmindustry/models/block/drill_mechanical.json",
+          "src/main/resources/assets/mcmindustry/models/item/drill_mechanical.json",
+          "src/main/resources/assets/mcmindustry/blockstates/drill_mechanical.json"
+        ]
+      }
+    },
+    {
+      "name": "Mindustry",
+      "type": "tab",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mindustry",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Drilltick",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drilltick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcmindustry/procedures/DrilltickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MDT",
+      "type": "command",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mdt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcmindustry/command/MDTCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "Commad",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drilltickcount",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcmindustry/procedures/CommadProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drillcontainer",
+      "type": "gui",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drillcontainer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcmindustry/world/inventory/DrillcontainerMenu.java",
+          "src/main/java/net/mcmindustry/client/gui/DrillcontainerScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "Driltestgenitem",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "driltestgenitem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcmindustry/procedures/DriltestgenitemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "drilltickcount",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item_group.mcmindustry.mindustry": "Mindustry",
+      "block.mcmindustry.drill_mechanical": "mechanical drill",
+      "gui.mcmindustry.drillcontainer.label_zuan_tou_chu_cun": "Drill Cache"
+    },
+    "zh_cn": {
+      "item_group.mcmindustry.mindustry": "Mindustry",
+      "block.mcmindustry.drill_mechanical": "mechanical drill",
+      "gui.mcmindustry.drillcontainer.label_zuan_tou_chu_cun": "钻头缓存"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "mcmindustry",
+    "modName": "McMindustry",
+    "version": "1.0.0",
+    "author": "Administrator, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.19.4",
+    "modElementsPackage": "net.mcmindustry",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300224119
+}

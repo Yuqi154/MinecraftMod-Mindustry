@@ -1,0 +1,9 @@
+{
+  "_fv": 43,
+  "_type": "command",
+  "definition": {
+    "commandName": "mdt",
+    "permissionLevel": "No requirement",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"42\" y=\"44\"><next><block type=\"literal\"><field name=\"name\">get</field><statement name=\"args\"><block type=\"literal\"><field name=\"name\">drilltickcount</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Commad</field></block></statement></block></statement></block></next></block></xml>"
+  }
+}
