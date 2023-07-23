@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mindustry:blocks/null",
+    "particle": "mindustry:blocks/null"
+  },
+  "render_type": "cutout"
+}

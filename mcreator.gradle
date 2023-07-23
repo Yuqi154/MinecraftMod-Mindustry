@@ -1,0 +1,51 @@
+task mcreatorLink(type: DefaultTask) {
+  ant.mkdir(dir: 'lib/');
+  ant.get(src: 'https://mcreator.net/link/download/dev_1.19.2', dest: 'lib/mcreator_link.jar', skipexisting: 'true');
+}
+
+compileJava.dependsOn mcreatorLink
+
+dependencies { implementation files("lib/mcreator_link.jar") }
+
+repositories {
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+dependencies {
+   compileOnly fg.deobf("curse.maven:jade-324717:4096513")
+   runtimeOnly fg.deobf("curse.maven:jade-324717:4096513")
+}
+
+repositories {
+  maven {
+      url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+  }
+}
+
+dependencies {
+  implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19:3.1.40')
+}
+
+repositories {
+  maven {
+    // location of the maven that hosts JEI files
+    name = "Progwml6 maven"
+    url = "https://dvs1.progwml6.com/files/maven/"
+  }    
+  maven {
+    // location of a maven mirror for JEI files, as a fallback
+    name = "ModMaven"
+    url = "https://modmaven.dev"
+  }   
+}
+
+dependencies {
+  compileOnly fg.deobf("mezz.jei:jei-1.19.2-common-api:11.4.0.286")
+  compileOnly fg.deobf("mezz.jei:jei-1.19.2-forge-api:11.4.0.286")
+  runtimeOnly fg.deobf("mezz.jei:jei-1.19.2-forge:11.4.0.286")
+}
+

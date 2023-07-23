@@ -1,0 +1,384 @@
+{
+  "mod_elements": [
+    {
+      "name": "MindustryTab",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mindustry_tab",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "DrillMechanical",
+      "type": "animatedblock",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_mechanical",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mindustry/block/entity/DrillMechanicalTileEntity.java",
+          "src/main/resources/assets/mindustry/blockstates/drill_mechanical.json",
+          "src/main/java/net/mindustry/block/renderer/DrillMechanicalTileRenderer.java",
+          "src/main/resources/assets/mindustry/models/item/drill_mechanical.json",
+          "src/main/resources/assets/mindustry/models/custom/drill_mechanical_particle.json",
+          "src/main/java/net/mindustry/block/model/DrillMechanicalBlockModel.java",
+          "src/main/java/net/mindustry/block/renderer/DrillMechanicalDisplayItemRenderer.java",
+          "src/main/java/net/mindustry/block/model/DrillMechanicalDisplayModel.java",
+          "src/main/java/net/mindustry/block/DrillMechanicalBlock.java",
+          "src/main/java/net/mindustry/block/display/DrillMechanicalDisplayItem.java"
+        ]
+      }
+    },
+    {
+      "name": "DrillContainerCache",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_container_cache",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mindustry/client/gui/DrillContainerCacheScreen.java",
+          "src/main/java/net/mindustry/world/inventory/DrillContainerCacheMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "DrillRightClick",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mindustry/procedures/DrillRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetMineUnder",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_mine_under",
+      "metadata": {
+        "return_type": "itemstack",
+        "files": [
+          "src/main/java/net/mindustry/procedures/GetMineUnderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetEfficiency",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_efficiency",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mindustry/procedures/GetEfficiencyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GenDrillItem",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gen_drill_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mindustry/procedures/GenDrillItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TabIcon",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tab_icon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mindustry/models/item/tab_icon.json",
+          "src/main/java/net/mindustry/item/TabIconItem.java"
+        ]
+      }
+    },
+    {
+      "name": "DrillInitialization",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_initialization",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mindustry/procedures/DrillInitializationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DrillDebug",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_debug",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mindustry/procedures/DrillDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Voidfill",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voidfill",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mindustry/models/item/voidfill.json",
+          "src/main/resources/assets/mindustry/models/block/voidfill.json",
+          "src/main/java/net/mindustry/block/VoidfillBlock.java",
+          "src/main/resources/assets/mindustry/blockstates/voidfill.json"
+        ]
+      }
+    },
+    {
+      "name": "DrillUninitialization",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_uninitialization",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mindustry/procedures/DrillUninitializationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DrillMechanicalplace",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drill_mechanicalplace",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mindustry/procedures/DrillMechanicalplaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "gui.mindustry.drill_container_cache.label_drill_cache": "钻头缓存",
+      "itemGroup.tabmindustry_tab": "Mindustry",
+      "item.mindustry.tab_icon": "Tab Icon",
+      "block.mindustry.drill_mechanical": "Drill Mechanical",
+      "block.mindustry.voidfill": "Voidfill"
+    },
+    "zh_cn": {
+      "gui.mindustry.drill_container_cache.label_drill_cache": "Drill Cache",
+      "itemGroup.tabmindustry_tab": "Mindustry Tab",
+      "item.mindustry.tab_icon": "Tab Icon",
+      "block.mindustry.drill_mechanical": "Drill Mechanical",
+      "block.mindustry.voidfill": "Voidfill"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "mindustry",
+    "modName": "Mindustry",
+    "version": "1.0.0",
+    "author": "Administrator, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "mcreator_link",
+      "jade",
+      "geckolib",
+      "jei"
+    ],
+    "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mindustry",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300224119
+}

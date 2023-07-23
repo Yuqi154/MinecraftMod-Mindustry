@@ -1,0 +1,6 @@
+{
+  "parent": "mindustry:displaysettings/2x2drill-template.item",
+  "textures": {
+    "particle": "mindustry:blocks/mechanical_drill"
+  }
+}

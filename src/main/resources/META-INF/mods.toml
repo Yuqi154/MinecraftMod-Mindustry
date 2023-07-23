@@ -1,22 +1,46 @@
 modLoader="javafml"
-loaderVersion="[45,)"
+loaderVersion="[43,)"
 license="Academic Free License v3.0"
 
 [[mods]]
-modId="mcmindustry"
+modId="mindustry"
 version="1.0.0"
-displayName="McMindustry"
+displayName="Mindustry"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
 authors="Administrator, MCreator"
 
-[[dependencies.mcmindustry]]
+[[dependencies.mindustry]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.4]"
+    versionRange="[1.19.2]"
     ordering="NONE"
     side="BOTH"
 
 
+[[dependencies.mindustry]]
+    modId="mcreator_link"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
+[[dependencies.mindustry]]
+    modId="jade"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.mindustry]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.mindustry]]
+    modId="jei"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
