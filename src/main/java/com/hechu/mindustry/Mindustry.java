@@ -4,17 +4,20 @@ import com.hechu.mindustry.block.BlockEntityRegister;
 import com.hechu.mindustry.block.BlockRegister;
 import com.hechu.mindustry.block.MechanicalDrillBlockEntityRenderer;
 import com.hechu.mindustry.block.PneumaticDrillBlockEntityRenderer;
+import com.hechu.mindustry.creative.CreativeModeTabRegister;
+import com.hechu.mindustry.entity.EntityRegister;
+import com.hechu.mindustry.entity.turrets.Duo;
+import com.hechu.mindustry.entity.turrets.DuoRenderer;
 import com.hechu.mindustry.item.ItemRegister;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -49,7 +52,11 @@ public class Mindustry {
         // Register the Deferred Register to the mod event bus so items get registered
         ItemRegister.ITEMS.register(modEventBus);
 
+        EntityRegister.ENTITIES.register(modEventBus);
+
         BlockEntityRegister.BLOCK_ENTITIES.register(modEventBus);
+
+        CreativeModeTabRegister.CREATIVE_MODE_TABS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -61,15 +68,19 @@ public class Mindustry {
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
     }
 
-    private void registerTabs(final CreativeModeTabEvent.Register event) {
-        event.registerCreativeModeTab(new ResourceLocation(MODID,"mindustry"), builder -> builder
+    private void registerTabs(final BuildCreativeModeTabContentsEvent event) {
+        /*event.accept(new ResourceLocation(MODID, "mindustry"), builder -> builder
                 .title(Component.translatable("itemGroup." + MODID + ".mindustry"))
                 .icon(() -> new ItemStack(ItemRegister.MECHANICAL_DRILL_ITEM.get()))
                 .displayItems((featureFlags, output) -> {
                     output.accept(ItemRegister.MECHANICAL_DRILL_ITEM.get());
                     output.accept(ItemRegister.PNEUMATIC_DRILL_ITEM.get());
                 })
-        );
+        );*/
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ItemRegister.MECHANICAL_DRILL_ITEM.get());
+            event.accept(ItemRegister.PNEUMATIC_DRILL_ITEM.get());
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -93,8 +104,17 @@ public class Mindustry {
         @SubscribeEvent
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
             LOGGER.info("HELLO from register renderers");
+            //BLOCK ENTITIES
             event.registerBlockEntityRenderer(BlockEntityRegister.MECHANICAL_DRILL_BLOCK_ENTITY.get(), context -> new MechanicalDrillBlockEntityRenderer());
             event.registerBlockEntityRenderer(BlockEntityRegister.PNEUMATIC_DRILL_BLOCK_ENTITY.get(), context -> new PneumaticDrillBlockEntityRenderer());
+
+            //ENTITIES
+            event.registerEntityRenderer(EntityRegister.DUO.get(), DuoRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void registerEntityAttributes(EntityAttributeCreationEvent event) {
+            event.put(EntityRegister.DUO.get(), Duo.createAttributes().build());
         }
     }
 }
