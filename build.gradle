@@ -119,7 +119,25 @@ dependencies {
     // And its provides the option to then use net.minecraft as the group, and one of; client, server or joined as the module name, plus the game version as version.
     // For all intends and purposes: You can treat this dependency as if it is a normal library you would use.
     implementation "net.neoforged:neoforge:${neo_version}"
+    // compile against the JEI API but do not include it at runtime
+    compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
+    compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
+    // at runtime, use the full JEI jar for Forge
+    runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraft_version}:${geckolib_version}")
+    implementation fg.deobf("curse.maven:create-328085:${create_id}")
+//    implementation fg.deobf("it.zerono.mods.zerocore:ZeroCore2:${minecraft_version}-${zeroCore_version}")
+//    implementation fg.deobf("curse.maven:ZeroCore2-247921:${zeroCore_id}")
+//    implementation fg.deobf("curse.maven:ExtremeReactors-250277:${extremeReactors_id}")
+    implementation fg.deobf("curse.maven:BetterF3-401648:${betterF3_id}")
+    implementation fg.deobf("curse.maven:ClothConfigAPI-348521:${clothConfigAPI_id}")
+//    implementation "mcjty.theoneprobe:theoneprobe:${top_version}"
+    // Visit https://www.curseforge.com/minecraft/mc-mods/jade/files/all?filter-status=1&filter-game-version=2020709689%3A7498
+    // to get the latest version's jade_id
+    implementation fg.deobf("curse.maven:jade-324717:${jade_id}")
+    implementation fg.deobf("curse.maven:just-enough-characters-250702:${justEnoughCharacters_id}")
 
+    implementation fg.deobf("curse.maven:kiwi-303657:${kiwi_fileId}")
     // Example mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
