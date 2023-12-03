@@ -14,13 +14,13 @@ import com.hechu.mindustry.kiwi.EntityModule;
 import com.hechu.mindustry.utils.Utils;
 import com.hechu.mindustry.world.entity.turrets.Duo;
 import com.hechu.mindustry.world.entity.turrets.DuoRenderer;
-import net.neoforged:forge.api.distmarker.Dist;
-import net.neoforged:forge.client.event.EntityRenderersEvent;
-import net.neoforged:forge.common.MinecraftForge;
-import net.neoforged:forge.event.entity.EntityAttributeCreationEvent;
-import net.neoforged:forge.eventbus.api.SubscribeEvent;
-import net.neoforged:forge.fml.common.Mod;
-import net.neoforged:forge.fml.loading.FMLPaths;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.loading.FMLPaths;
 import software.bernie.geckolib.GeckoLib;
 
 @Mod(MindustryConstants.MOD_ID)
@@ -45,7 +45,7 @@ public class Mindustry {
 
 //        CreativeModeTabRegister.CREATIVE_MODE_TABS.register(modEventBus);
 
-        neoforged:forge.EVENT_BUS.register(this);
+        neoforged.EVENT_BUS.register(this);
     }
 
     @Mod.EventBusSubscriber(modid = MindustryConstants.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

@@ -4,9 +4,9 @@ import com.hechu.mindustry.annotation.Block;
 import com.hechu.mindustry.kiwi.MutilBlockModule;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class TurretBlockStateGenerator extends BlockStateProvider {
     public TurretBlockStateGenerator(PackOutput output, String modid, ExistingFileHelper exFileHelper) {

@@ -13,9 +13,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.neoforged:forge.common.crafting.AbstractIngredient;
-import net.neoforged:forge.common.crafting.IIngredientSerializer;
-import net.neoforged:forge.registries.ForgeRegistries;
+import net.neoforged.neoforge.common.crafting.AbstractIngredient;
+import net.neoforged.neoforge.common.crafting.IIngredientSerializer;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import org.apache.commons.lang3.NotImplementedException;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -62,7 +62,7 @@ public class MindustryProcessingIngredient extends AbstractIngredient {
             itemStack = itemStackFromJson(jsonObject);
         } else if (jsonObject.has("tag")) {
             //TODO
-            throw new JsonParseException("MindustryProcessingIngredient 暂不支持 Tag");
+            throw new JsonParseException("MindustryProcessingIngredient �ݲ�֧�� Tag");
 //            ResourceLocation resourcelocation = new ResourceLocation(GsonHelper.getAsString(json, "tag"));
 //            TagKey<Item> tagkey = TagKey.create(Registries.ITEM, resourcelocation);
 //            return new TagValue(tagkey);
@@ -92,7 +92,7 @@ public class MindustryProcessingIngredient extends AbstractIngredient {
     }
 
     public static @NotNull MindustryProcessingIngredient of(TagKey<Item> tag) {
-        throw new NotImplementedException("MindustryProcessingIngredient 暂不支持 Tag");
+        throw new NotImplementedException("MindustryProcessingIngredient �ݲ�֧�� Tag");
     }
 
     public static MindustryProcessingIngredient of(ItemStack itemStack) {

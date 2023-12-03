@@ -1,6 +1,6 @@
 package com.hechu.mindustry.utils.capabilities;
 
-import net.minecraftforge.common.capabilities.AutoRegisterCapability;
+import net.neoforged.neoforge.common.capabilities.AutoRegisterCapability;
 
 @AutoRegisterCapability
 public interface IHealthHandler {
