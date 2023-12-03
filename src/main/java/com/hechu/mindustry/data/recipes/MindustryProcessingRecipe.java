@@ -15,8 +15,8 @@ import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged:forge.items.IItemHandlerModifiable;
+import net.neoforged:forge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Constructor;
