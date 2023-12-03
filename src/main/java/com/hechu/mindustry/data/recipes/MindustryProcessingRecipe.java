@@ -55,7 +55,8 @@ public abstract class MindustryProcessingRecipe<T extends MultiblockCraftingBloc
     }
 
     /**
-     * 获取每个物品输入槽应该消耗的物品数量
+     * 鑾峰彇姣忎釜鐗╁搧杈撳叆妲藉簲璇ユ秷鑰楃殑鐗╁搧鏁伴噺
+     * ps:鑳戒笉鑳界敤UTF-8鏍煎紡鍐欏晩锛侊紒
      *
      * @param blockEntity
      * @return
